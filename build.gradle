@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+ext {
+    group = 'sample'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '11'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    // Nothing
+}
+
+// Javaコンパイル設定
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    it.options.encoding = 'UTF-8'
+}
