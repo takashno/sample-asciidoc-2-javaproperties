@@ -22,7 +22,7 @@ public class SampleApp {
                 StandardCharsets.UTF_8);
 
         // 変換
-        Properties prop = new Properties();
+        var prop = new Properties();
         asciidocLines.stream()
                 .map(FILTER_PATTERN::matcher)
                 .filter(Matcher::find)
